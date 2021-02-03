@@ -1,8 +1,14 @@
-﻿using System;
+﻿
+
+using Bogus.DataSets;
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
+using Bogus.DataSets;
 
 namespace TesteEmpresa.Models
 {
@@ -10,22 +16,25 @@ namespace TesteEmpresa.Models
     {
         [Key]
         public int Id { get; set; }
-        [StringLength(50, ErrorMessage = "Deve ser menor que 50 caracteres.")]
         public string Razao_Social { get; set; }
         [StringLength(14, ErrorMessage = "Deve ser menor que 14 caracteres.")]
         public string CNPJ { get; set; }
+
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{dd-MM-yyyy:0}", ApplyFormatInEditMode = true)]
         public DateTime Data_Fundacao { get; set; }
-        [RegularExpression(@"^\d+\.\d{0,2}$")]
-        [Range(0, 9999999999999999.99)]
+
+        [Column(TypeName = "decimal(18, 2)"), DataType(DataType.Currency) ]
+        
+        //[DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:C}")]
+        //[DisplayFormat(DataFormatString = "{0:C}")]
         public decimal Capital { get; set; }
-        [StringLength(1)]
-        public char Quarentena { get; set; }
-        [StringLength(1)]
-        public char Status_Cliente { get; set; }
-        [StringLength(1)]
+
+        public string Quarentena { get; set; }
+        
+        public string Status_Cliente { get; set; }
+        
         public string Classificacao { get; set; }
 
     }
+
 }

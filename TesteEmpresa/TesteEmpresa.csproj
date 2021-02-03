@@ -17,6 +17,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Bogus" Version="32.1.1" />
+    <PackageReference Include="CurrencyFor.HTMLHelper" Version="1.0.5" />
+    <PackageReference Include="jQuery.InputMask" Version="5.0.5" />
+    <PackageReference Include="jQuery.MaskedInput" Version="1.4.1" />
+    <PackageReference Include="jQuery.Validation" Version="1.19.3" />
+    <PackageReference Include="Microsoft.AspNet.Mvc.pt-br" Version="5.2.7" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.0.0">
@@ -25,6 +31,7 @@
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.0.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.0.0" />
+    <PackageReference Include="System.Globalization" Version="4.3.0" />
   </ItemGroup>
 
 </Project>
